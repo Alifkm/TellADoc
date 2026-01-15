@@ -1,7 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Alip\\portofolio_web\\DocuMind\\backend\\TellADoc.API\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\controllers\\indexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\controllers\\indexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +43,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\appsettings.json",
+              "RelativeDocumentMoniker": "TellADoc.API\\appsettings.json",
+              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\appsettings.json",
+              "RelativeToolTip": "TellADoc.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-15T09:42:37.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Program.cs",
+              "RelativeDocumentMoniker": "TellADoc.API\\Program.cs",
+              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Program.cs",
+              "RelativeToolTip": "TellADoc.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T09:42:37.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TellADoc.API\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TellADoc.API\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T09:40:25.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Document.cs",
+              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Models\\Document.cs",
+              "RelativeDocumentMoniker": "TellADoc.API\\Models\\Document.cs",
+              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Models\\Document.cs",
+              "RelativeToolTip": "TellADoc.API\\Models\\Document.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T09:18:46.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IndexController.cs",
+              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\IndexController.cs",
+              "RelativeDocumentMoniker": "TellADoc.API\\Controllers\\IndexController.cs",
+              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\IndexController.cs",
+              "RelativeToolTip": "TellADoc.API\\Controllers\\IndexController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T09:18:06.351Z",
+              "EditorCaption": ""
             }
           ]
         }
