@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "DlAVZaS0Bz4=",
+  "success": true,
+  "projectFilePath": "D:\\Alip\\portofolio_web\\DocuMind\\backend\\TellADoc.API\\TellADoc.API\\TellADoc.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rdsgr\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\rdsgr\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
