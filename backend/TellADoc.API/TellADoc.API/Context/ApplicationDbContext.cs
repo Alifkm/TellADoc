@@ -9,6 +9,6 @@ namespace TellADoc.API.Context
         {
         }
 
-        public Document document { get; set; }
+        public DbSet<Document> Document { get; set; }
     }
 }

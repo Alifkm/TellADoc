@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using Npgsql;
+using TellADoc.API.Context;
+using TellADoc.API.Seeder;
 
 namespace TellADoc.API
 {
@@ -13,6 +17,20 @@ namespace TellADoc.API
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
+            // Register DbContext
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowClient", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -27,6 +45,15 @@ namespace TellADoc.API
 
 
             app.MapControllers();
+
+            using(var scope = app.Services.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                //dbContext.Database.Migrate();
+                DbSeeder.SeedDocuments(dbContext);
+            }
+
+            app.UseCors("AllowClient");
 
             app.Run();
         }

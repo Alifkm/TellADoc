@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\",
+  "WorkspaceRootPath": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\seeder\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\seeder\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\telladoc.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\telladoc.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\controllers\\indexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\controllers\\indexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\controllers\\indexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|d:\\alip\\portofolio_web\\telladoc\\backend\\telladoc.api\\telladoc.api\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|c:\\users\\alifk\\onedrive\\documents\\project for portfolio\\telladoc\\backend\\telladoc.api\\telladoc.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8597E60-0CBB-4E9E-A995-394514452CB0}|TellADoc.API\\TellADoc.API.csproj|solutionrelative:telladoc.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,65 +58,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "TellADoc.API",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\TellADoc.API.csproj",
+              "RelativeDocumentMoniker": "TellADoc.API\\TellADoc.API.csproj",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\TellADoc.API.csproj",
+              "RelativeToolTip": "TellADoc.API\\TellADoc.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-18T15:58:05.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Seeder\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "TellADoc.API\\Seeder\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Seeder\\DbSeeder.cs",
+              "RelativeToolTip": "TellADoc.API\\Seeder\\DbSeeder.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA0wBcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T15:37:15.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "TellADoc.API\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "TellADoc.API\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAABOwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T16:35:03.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\appsettings.json",
               "RelativeDocumentMoniker": "TellADoc.API\\appsettings.json",
-              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\appsettings.json",
               "RelativeToolTip": "TellADoc.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-01-15T09:42:37.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Program.cs",
               "RelativeDocumentMoniker": "TellADoc.API\\Program.cs",
-              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Program.cs",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Program.cs",
               "RelativeToolTip": "TellADoc.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T09:42:37.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Context\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Context\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "TellADoc.API\\Context\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Context\\ApplicationDbContext.cs",
               "RelativeToolTip": "TellADoc.API\\Context\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T09:40:25.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Document.cs",
-              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Models\\Document.cs",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Models\\Document.cs",
               "RelativeDocumentMoniker": "TellADoc.API\\Models\\Document.cs",
-              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Models\\Document.cs",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Models\\Document.cs",
               "RelativeToolTip": "TellADoc.API\\Models\\Document.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T09:18:46.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "IndexController.cs",
-              "DocumentMoniker": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\IndexController.cs",
+              "DocumentMoniker": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\IndexController.cs",
               "RelativeDocumentMoniker": "TellADoc.API\\Controllers\\IndexController.cs",
-              "ToolTip": "D:\\Alip\\portofolio_web\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\IndexController.cs",
+              "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\Controllers\\IndexController.cs",
               "RelativeToolTip": "TellADoc.API\\Controllers\\IndexController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBMAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T09:18:06.351Z",
               "EditorCaption": ""

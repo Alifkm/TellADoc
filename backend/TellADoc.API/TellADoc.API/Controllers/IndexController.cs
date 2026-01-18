@@ -11,6 +11,15 @@ namespace TellADoc.API.Controllers
             return View();
         }
 
+        //[Route("/")]
+        //[Route("document")]
+        //[HttpGet]
+        //public async Task<IActionResult> GetDocuments()
+        //{
+
+        //}
+
+
         // GET: IndexController/Details/5
         public ActionResult Details(int id)
         {

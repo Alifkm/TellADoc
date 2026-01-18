@@ -8,13 +8,10 @@ namespace TellADoc.API.Models
         public int Id { get; set; }
 
 
-        [Required]
         public string Name { get; set; }
-        [Required]
         public string Type { get; set; }
-        [Required]
-        public DateTime CreatedAt { get; set; }
-        [Required]
-        public DateTime UpdatedAt { get; set; }
+        public float Size { get; set; }
+        public DateTime Created_At { get; set; }
+        public DateTime Updated_At { get; set; }
     }
 }
