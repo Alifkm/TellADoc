@@ -1,24 +1,33 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TellADoc.API.Context;
 
 namespace TellADoc.API.Controllers
 {
     public class IndexController : Controller
     {
+        public readonly ApplicationDbContext _context;
+
+        public IndexController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         // GET: IndexController
         public ActionResult Index()
         {
             return View();
         }
 
-        //[Route("/")]
-        //[Route("document")]
-        //[HttpGet]
-        //public async Task<IActionResult> GetDocuments()
-        //{
-
-        //}
-
+        [Route("/")]
+        [Route("document")]
+        [HttpGet]
+        public async Task<IActionResult> GetDocuments()
+        {
+            var documents = await _context.Document.ToListAsync();
+            return Ok(documents);
+        }
 
         // GET: IndexController/Details/5
         public ActionResult Details(int id)

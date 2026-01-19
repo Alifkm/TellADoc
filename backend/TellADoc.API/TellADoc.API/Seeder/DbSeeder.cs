@@ -7,24 +7,22 @@ namespace TellADoc.API.Seeder
     {
         public static void SeedDocuments(ApplicationDbContext _context)
         {
-            if(!_context.Document.Any())
-            {
+            //if(!_context.Document.Any())
+            //{
                 IEnumerable<Document> documents = new List<Document>()
                 {
                     new Document()
                     {
-                        Name = "Document_AHAY.PDF",
-                        Type = "PDF",
-                        Size = 10.0f,
+                        Name = "Report_nih.xlsx",
+                        Type = "EXCEL",
+                        Size = 5.0f,
                         Created_At = DateTime.UtcNow,
                         Updated_At = DateTime.UtcNow,
                     }
                 };
                 _context.Document.AddRange(documents);
                 _context.SaveChanges();
-            }
-
-            
+            //}
         }
     }
 }

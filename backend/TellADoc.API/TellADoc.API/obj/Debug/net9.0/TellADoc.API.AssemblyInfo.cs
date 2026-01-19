@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TellADoc.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c307c769baefde00768835b5d2547da76ccc5ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82cd24bdba6edff667ebc1f4f0b4c15c2f96c190")]
 [assembly: System.Reflection.AssemblyProductAttribute("TellADoc.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TellADoc.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
