@@ -10,5 +10,11 @@ namespace TellADoc.API.Context
         }
 
         public DbSet<Document> Document { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Document>().HasQueryFilter(row => !row.IsDeleted);
+        }
+
     }
 }

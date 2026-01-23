@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TellADoc.API.Context;
@@ -11,9 +12,11 @@ using TellADoc.API.Context;
 namespace TellADoc.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260120044028_AddMultipleColumnsToDocumentTable")]
+    partial class AddMultipleColumnsToDocumentTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,49 +33,50 @@ namespace TellADoc.API.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AiStatus")
+                    b.Property<string>("Ai_Status")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("Created_At")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DeletedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("FileName")
+                    b.Property<string>("File_Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<long>("FileSize")
+                    b.Property<long>("File_Size")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("FileType")
+                    b.Property<string>("File_Type")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
 
                     b.Property<string>("Language")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("PageCount")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("ProcessingTimeSeconds")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("StoragePath")
+                    b.Property<string>("Original_Text")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("SummaryText")
+                    b.Property<int>("Page_Count")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Processing_Time_Seconds")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Storage_Path")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<string>("Summary_Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("Updated_At")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("Uploaded_At")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("User_Id")
