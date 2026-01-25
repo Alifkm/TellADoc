@@ -1,0 +1,7 @@
+do
+
+git restore backend/TellADoc.API/.vs
+
+before 
+
+git pull origin

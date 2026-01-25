@@ -9,6 +9,7 @@ namespace TellADoc.API.Controllers
     public class IndexController : Controller
     {
         public readonly ApplicationDbContext _context;
+        readonly string[] Users = new string[] { "Admin", "User", "Viewer" };
 
         public IndexController(ApplicationDbContext context)
         {
@@ -34,6 +35,14 @@ namespace TellADoc.API.Controllers
         [HttpPost]
         public async Task<IActionResult> UploadDocument([FromBody] Document document)
         {
+            bool isDeleted = false;
+            DateTime createdAt = DateTime.UtcNow;
+            DateTime updatedAt = DateTime.UtcNow;
+
+            document.IsDeleted = isDeleted;
+            document.CreatedAt = createdAt;
+            document.UpdatedAt = updatedAt;
+
             _context.Document.Add(document);
             await _context.SaveChangesAsync();
             return Ok();
@@ -87,11 +96,31 @@ namespace TellADoc.API.Controllers
         //    }
         //}
 
-        // GET: IndexController/Delete/5
-        [HttpDelete]
-        public ActionResult Delete(int id)
+        [Route("documents/{id}")]
+        [HttpPatch]
+        public async Task<IActionResult> DeleteDocument(int id, string user)
         {
-            return View();
+            var doc = await _context.Document.FindAsync(id);
+
+            if(user == "Admin" || user == "User")
+            {
+                if (doc != null)
+                {
+                    doc.IsDeleted = true;
+                    doc.DeletedAt = DateTime.UtcNow;
+                }
+                else
+                {
+                    return NotFound("Document is not found");
+                }
+
+                await _context.SaveChangesAsync();
+                return NoContent();
+            }
+            else
+            {
+                return Unauthorized();
+            }
         }
 
         //// POST: IndexController/Delete/5
