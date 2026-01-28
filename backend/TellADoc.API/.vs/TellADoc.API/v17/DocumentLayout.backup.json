@@ -74,8 +74,7 @@
               "RelativeToolTip": "TellADoc.API\\Migrations\\20260121083522_UpdateDocumentTable.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAkwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T08:35:22.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T08:35:22.2Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "TellADoc.API\\Context\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T09:40:25.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T09:40:25.896Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "TellADoc.API\\Models\\Document.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA0wBkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T09:18:46.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T09:18:46.911Z"
             },
             {
               "$type": "Document",
@@ -126,8 +123,7 @@
               "RelativeToolTip": "TellADoc.API\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T08:40:43.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T08:40:43.994Z"
             },
             {
               "$type": "Document",
@@ -138,8 +134,7 @@
               "ToolTip": "C:\\Users\\alifk\\OneDrive\\Documents\\project for portfolio\\TellADoc\\backend\\TellADoc.API\\TellADoc.API\\TellADoc.API.csproj",
               "RelativeToolTip": "TellADoc.API\\TellADoc.API.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-18T15:58:05.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-18T15:58:05.666Z"
             },
             {
               "$type": "Document",
@@ -151,8 +146,7 @@
               "RelativeToolTip": "TellADoc.API\\Seeder\\DbSeeder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T15:37:15.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-18T15:37:15.873Z"
             },
             {
               "$type": "Document",
@@ -164,8 +158,7 @@
               "RelativeToolTip": "TellADoc.API\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T16:35:03.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-17T16:35:03.623Z"
             },
             {
               "$type": "Document",
@@ -177,8 +170,7 @@
               "RelativeToolTip": "TellADoc.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-15T09:42:37.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T09:42:37.959Z"
             },
             {
               "$type": "Document",
@@ -190,8 +182,7 @@
               "RelativeToolTip": "TellADoc.API\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T09:42:37.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T09:42:37.185Z"
             }
           ]
         }
