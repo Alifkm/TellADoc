@@ -9,8 +9,7 @@ namespace TellADoc.API.Models
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("User")]
-        public int User_Id { get; set; }
+        public int UserId { get; set; }
 
         public string FileName { get; set; }
         public string FileType { get; set; }
@@ -21,10 +20,12 @@ namespace TellADoc.API.Models
         public string Language { get; set; }
         public int PageCount { get; set; }
         public int ProcessingTimeSeconds { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
         public bool IsDeleted { get; set; }
         [AllowNull]
-        public DateTime DeletedAt { get; set; }
+        public DateTimeOffset? DeletedAt { get; set; }
+
+        public User User { get; set; } = null!;
     }
 }

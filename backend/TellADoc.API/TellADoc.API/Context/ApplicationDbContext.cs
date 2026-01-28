@@ -10,10 +10,17 @@ namespace TellADoc.API.Context
         }
 
         public DbSet<Document> Document { get; set; }
+        public DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Document>().HasQueryFilter(row => !row.IsDeleted);
+
+            modelBuilder.Entity<User>()
+            .HasMany(u => u.Documents)
+            .WithOne(d => d.User)
+            .HasForeignKey(d => d.UserId)
+            .IsRequired();
         }
 
     }
