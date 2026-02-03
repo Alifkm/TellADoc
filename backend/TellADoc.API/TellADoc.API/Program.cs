@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
+using Scalar.AspNetCore;
 using TellADoc.API.Context;
 using TellADoc.API.Seeder;
 
@@ -12,6 +13,8 @@ namespace TellADoc.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            
+            //builder.Services.
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -37,6 +40,10 @@ namespace TellADoc.API
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.MapScalarApiReference(options =>
+                {
+                    options.WithTitle("Dev API nih bosque");
+                });
             }
 
             app.UseHttpsRedirection();

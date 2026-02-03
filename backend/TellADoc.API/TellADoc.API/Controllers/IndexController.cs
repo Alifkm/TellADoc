@@ -6,7 +6,9 @@ using TellADoc.API.Models;
 
 namespace TellADoc.API.Controllers
 {
-    public class IndexController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class IndexController : ControllerBase
     {
         public readonly ApplicationDbContext _context;
         readonly string[] Users = new string[] { "Admin", "User", "Viewer" };
@@ -17,10 +19,10 @@ namespace TellADoc.API.Controllers
         }
 
         // GET: IndexController
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
 
         [Route("/")]
         [Route("document")]
