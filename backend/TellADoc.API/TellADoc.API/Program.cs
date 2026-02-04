@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
 using Scalar.AspNetCore;
 using TellADoc.API.Context;
+using TellADoc.API.Identity;
 using TellADoc.API.Seeder;
 
 namespace TellADoc.API
@@ -15,6 +17,7 @@ namespace TellADoc.API
             // Add services to the container.
             
             //builder.Services.
+            builder.Services.AddSingleton<TokenGenerator>();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -23,6 +26,7 @@ namespace TellADoc.API
             // Register DbContext
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
             builder.Services.AddCors(options =>
             {
@@ -40,10 +44,10 @@ namespace TellADoc.API
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
-                app.MapScalarApiReference(options =>
-                {
-                    options.WithTitle("Dev API nih bosque");
-                });
+                //app.MapScalarApiReference(options =>
+                //{
+                //    options.WithTitle("Dev API nih bosque");
+                //});
             }
 
             app.UseHttpsRedirection();
@@ -52,7 +56,15 @@ namespace TellADoc.API
 
             app.MapControllers();
 
-            using(var scope = app.Services.CreateScope())
+            app.MapPost("/login", (LoginRequest request, TokenGenerator tokenGenerator) =>
+            {
+                return new
+                {
+                    token = tokenGenerator.GenerateToken(request.Email)
+                };
+            });
+
+            using (var scope = app.Services.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.Migrate();
