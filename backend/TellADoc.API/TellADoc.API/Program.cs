@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Npgsql;
 using Scalar.AspNetCore;
 using TellADoc.API.Context;
@@ -15,9 +17,9 @@ namespace TellADoc.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            
+
             //builder.Services.
-            builder.Services.AddSingleton<TokenGenerator>();
+            //builder.Services.AddSingleton<TokenGenerator>();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -38,6 +40,23 @@ namespace TellADoc.API
                 });
             });
 
+            builder.Services.AddAuthorization();
+
+            //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(x =>
+            //    {
+            //        x.TokenValidationParameters = new TokenValidationParameters
+            //        {
+            //            IssuerSigningKey = new SymmetricSecurityKey("JANGAN_HARD_CODE_KEY_DI_CODING"u8.ToArray()),
+            //            ValidIssuer = "TellADoc.API",
+            //            ValidAudience = "TellADoc.API",
+            //            ValidateIssuerSigningKey = true,
+            //            ValidateLifetime = true,
+            //            ValidateIssuer = true,
+            //            ValidateAudience = true
+            //        };
+            //    });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -52,17 +71,19 @@ namespace TellADoc.API
 
             app.UseHttpsRedirection();
 
+            //app.UseAuthentication();
             app.UseAuthorization();
 
+            //app.MapControllers().RequireAuthorization();
             app.MapControllers();
 
-            app.MapPost("/login", (LoginRequest request, TokenGenerator tokenGenerator) =>
-            {
-                return new
-                {
-                    token = tokenGenerator.GenerateToken(request.Email)
-                };
-            });
+            //app.MapPost("/login", (LoginRequest request, TokenGenerator tokenGenerator) =>
+            //{
+            //    return new
+            //    {
+            //        token = tokenGenerator.GenerateToken(request.Email)
+            //    };
+            //});
 
             using (var scope = app.Services.CreateScope())
             {
