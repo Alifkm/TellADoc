@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TellADoc.API.Context;
@@ -24,9 +25,11 @@ namespace TellADoc.API.Controllers
         //    return View();
         //}
 
+        
         [Route("/")]
         [Route("document")]
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetDocuments()
         {
             var documents = await _context.Document.ToListAsync();

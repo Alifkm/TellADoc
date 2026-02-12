@@ -1,6 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
 
 namespace TellADoc.API.Identity
 {
@@ -9,7 +10,7 @@ namespace TellADoc.API.Identity
         public string GenerateToken(string email)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = "JANGAN_HARD_CODE_KEY_DI_CODING"u8.ToArray();
+            var key = "INI_RAHASIA_BOS_JANGAN_SAMPE_KETAUAN"u8.ToArray();
 
             var claims = new List<Claim>
             {
