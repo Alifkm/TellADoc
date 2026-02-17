@@ -27,7 +27,7 @@ namespace TellADoc.API.Controllers
 
         
         [Route("/")]
-        [Route("document")]
+        [Route("/document")]
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> GetDocuments()

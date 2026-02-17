@@ -7,10 +7,17 @@ namespace TellADoc.API.Identity
 {
     public class TokenGenerator
     {
+        public IConfiguration Configuration { get; }
+
+        public TokenGenerator(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         public string GenerateToken(string email)
         {
+            var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = "INI_RAHASIA_BOS_JANGAN_SAMPE_KETAUAN"u8.ToArray();
 
             var claims = new List<Claim>
             {

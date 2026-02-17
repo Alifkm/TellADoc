@@ -83,16 +83,16 @@ namespace TellADoc.API
             app.UseAuthentication();
             app.UseAuthorization();
 
-            //app.MapControllers().RequireAuthorization();
             app.MapControllers();
+            //app.MapControllers().RequireAuthorization();
 
-            app.MapPost("/login", (LoginRequest request, TokenGenerator tokenGenerator) =>
-            {
-                return new
-                {
-                    token = tokenGenerator.GenerateToken(request.Email)
-                };
-            });
+            //app.MapPost("/login", (LoginRequest request, TokenGenerator tokenGenerator) =>
+            //{
+            //    return new
+            //    {
+            //        token = tokenGenerator.GenerateToken(request.Email)
+            //    };
+            //});
 
             using (var scope = app.Services.CreateScope())
             {
