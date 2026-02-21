@@ -7,8 +7,8 @@ using Npgsql;
 using Scalar.AspNetCore;
 using System.Text;
 using TellADoc.API.Context;
-using TellADoc.API.Identity;
 using TellADoc.API.Seeder;
+using TellADoc.API.Services;
 
 namespace TellADoc.API
 {
@@ -19,7 +19,9 @@ namespace TellADoc.API
             var builder = WebApplication.CreateBuilder(args);
             var secret_key = builder.Configuration["JWT:key"]?.
                 SelectMany(c => Encoding.UTF8.GetBytes(c.ToString())).ToArray() ?? new byte[0];
-            var issuer_key = new SymmetricSecurityKey(secret_key);
+            var key = new SymmetricSecurityKey(secret_key);
+            var issuer = builder.Configuration["JWT:issuer"];
+            var audience = builder.Configuration["JWT:audience"];
 
             // Add services to the container.
 
@@ -54,9 +56,9 @@ namespace TellADoc.API
                     x.TokenValidationParameters = new TokenValidationParameters
                     {
                         //IssuerSigningKey = new SymmetricSecurityKey("JANGAN_HARD_CODE_KEY_DI_CODING"u8.ToArray()),
-                        IssuerSigningKey = issuer_key,
-                        ValidIssuer = "TellADoc.API",
-                        ValidAudience = "TellADoc.API",
+                        IssuerSigningKey = key,
+                        ValidIssuer = issuer,
+                        ValidAudience = audience,
                         ValidateIssuerSigningKey = true,
                         ValidateLifetime = true,
                         ValidateIssuer = true,

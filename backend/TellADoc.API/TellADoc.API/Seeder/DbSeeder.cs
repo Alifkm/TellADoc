@@ -1,5 +1,6 @@
 ﻿using TellADoc.API.Context;
 using TellADoc.API.Models;
+using TellADoc.API.Services;
 
 namespace TellADoc.API.Seeder
 {
@@ -14,18 +15,18 @@ namespace TellADoc.API.Seeder
                     new User()
                     {
                         Username = "admin",
-                        Email = "a@b.com",
-                        Password = "admin",
+                        Email = "admin@gmail.com",
+                        PasswordHash = HashGenerator.GenerateHashPassword("admin123"),
                         Role = "ADMIN",
                         CreatedAt = DateTime.UtcNow,
                         UpdatedAt = DateTime.UtcNow,
                     },
                      new User()
                     {
-                        Username = "admin",
-                        Email = "a@b.com",
-                        Password = "admin",
-                        Role = "ADMIN",
+                        Username = "user",
+                        Email = "user@gmail.com",
+                        PasswordHash = HashGenerator.GenerateHashPassword("userNihBos"),
+                        Role = "USER",
                         CreatedAt = DateTime.UtcNow,
                         UpdatedAt = DateTime.UtcNow,
                     }
@@ -40,7 +41,7 @@ namespace TellADoc.API.Seeder
                 {
                     new Document()
                     {
-                        UserId = 2,
+                        UserId = 7,
                         FileName = "Document_cuy.PDF",
                         FileType = "PDF",
                         FileSize = 2,

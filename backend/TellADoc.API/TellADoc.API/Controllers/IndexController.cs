@@ -36,7 +36,7 @@ namespace TellADoc.API.Controllers
             return Ok(documents);
         }
 
-        [Route("document/upload")]
+        [Route("/document/upload")]
         [HttpPost]
         public async Task<IActionResult> UploadDocument([FromBody] Document document)
         {
@@ -101,7 +101,7 @@ namespace TellADoc.API.Controllers
         //    }
         //}
 
-        [Route("documents/{id}")]
+        [Route("/documents/{id}")]
         [HttpPatch]
         public async Task<IActionResult> DeleteDocument(int id, string user)
         {

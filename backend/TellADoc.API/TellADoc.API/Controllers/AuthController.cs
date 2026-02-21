@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using TellADoc.API.Identity;
 using TellADoc.API.Models;
+using TellADoc.API.Services;
 
 namespace TellADoc.API.Controllers
 {

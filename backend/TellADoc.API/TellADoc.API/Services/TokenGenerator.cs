@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace TellADoc.API.Identity
+namespace TellADoc.API.Services
 {
     public class TokenGenerator
     {
@@ -17,6 +17,8 @@ namespace TellADoc.API.Identity
         public string GenerateToken(string email)
         {
             var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
+            var issuer = Configuration["Jwt:Issuer"];
+            var audience = Configuration["Jwt:Audience"];
             var tokenHandler = new JwtSecurityTokenHandler();
 
             var claims = new List<Claim>
@@ -30,9 +32,9 @@ namespace TellADoc.API.Identity
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddMinutes(30),
-                Issuer = "TellADoc.API",
-                Audience = "TellADoc.API",
-                SigningCredentials = 
+                Issuer = issuer,
+                Audience = audience,
+                SigningCredentials =
                     new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
