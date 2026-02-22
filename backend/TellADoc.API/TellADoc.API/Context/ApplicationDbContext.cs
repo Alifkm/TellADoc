@@ -11,6 +11,8 @@ namespace TellADoc.API.Context
 
         public DbSet<Document> Document { get; set; }
         public DbSet<User> User { get; set; }
+        
+        public DbSet<RefreshToken> RefreshToken { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

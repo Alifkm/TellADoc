@@ -4,26 +4,62 @@ using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using TellADoc.API.Models;
 using TellADoc.API.Services;
+using TellADoc.API.Context;
 
 namespace TellADoc.API.Controllers
 {
     public class AuthController : Controller
     {
         private TokenGenerator _tokenGenerator;
+        private readonly ApplicationDbContext _context;
+        private readonly PasswordHashGenerator _passwordHashGenerator = new();
 
-        public AuthController(TokenGenerator tokenGenerator)
+        public AuthController(TokenGenerator tokenGenerator, ApplicationDbContext context)
         {
             _tokenGenerator = tokenGenerator;
+            _context = context;
         }
 
         [AllowAnonymous]
         [Route("/login")]
         [HttpPost]
-        public IActionResult Login([FromBody] User user)
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            string token = _tokenGenerator.GenerateToken(user.Email);
+            var user = _context.User.FirstOrDefault(u => u.Email == request.Email);
+            if(user == null)
+            {
+                return Unauthorized("Email or Password is wrong");
+            }
 
-            return Ok(new { token });
+            bool isPasswordValid = _passwordHashGenerator.VerifyHash(request.Password, user.PasswordHash);
+
+            if(!isPasswordValid)
+            {
+                return Unauthorized("Email or Password is wrong");
+            }
+
+            string accessToken = _tokenGenerator.GenerateAccessToken(user);
+            string refreshToken = _tokenGenerator.GenerateRefreshToken();
+
+            await SaveRefreshTokenToDatabase(user, refreshToken);
+
+            return Ok(new { accessToken, refreshToken });
+        }
+
+        private async Task<IActionResult> SaveRefreshTokenToDatabase(User user, string refreshToken)
+        {
+            var refreshTokenEntity = new RefreshToken
+            {
+                UserId = user.Id,
+                Token = refreshToken,
+                CreatedAt = DateTime.UtcNow,
+                ExpiresAt = DateTime.UtcNow.AddDays(15)
+            };
+
+            _context.RefreshToken.Add(refreshTokenEntity);
+
+            await _context.SaveChangesAsync();
+            return Ok();
         }
     }
 }

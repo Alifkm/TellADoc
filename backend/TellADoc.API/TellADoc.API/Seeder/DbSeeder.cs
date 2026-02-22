@@ -6,6 +6,8 @@ namespace TellADoc.API.Seeder
 {
     public static class DbSeeder
     {
+        static PasswordHashGenerator hashGenerator = new PasswordHashGenerator();
+
         public static void SeedDocuments(ApplicationDbContext _context)
         {
             if (!_context.User.Any())
@@ -16,7 +18,7 @@ namespace TellADoc.API.Seeder
                     {
                         Username = "admin",
                         Email = "admin@gmail.com",
-                        PasswordHash = HashGenerator.GenerateHashPassword("admin123"),
+                        PasswordHash = hashGenerator.GenerateHash("admin123"),
                         Role = "ADMIN",
                         CreatedAt = DateTime.UtcNow,
                         UpdatedAt = DateTime.UtcNow,
@@ -25,7 +27,7 @@ namespace TellADoc.API.Seeder
                     {
                         Username = "user",
                         Email = "user@gmail.com",
-                        PasswordHash = HashGenerator.GenerateHashPassword("userNihBos"),
+                        PasswordHash = hashGenerator.GenerateHash("userNihBos"),
                         Role = "USER",
                         CreatedAt = DateTime.UtcNow,
                         UpdatedAt = DateTime.UtcNow,
@@ -41,7 +43,7 @@ namespace TellADoc.API.Seeder
                 {
                     new Document()
                     {
-                        UserId = 7,
+                        UserId = 9,
                         FileName = "Document_cuy.PDF",
                         FileType = "PDF",
                         FileSize = 2,

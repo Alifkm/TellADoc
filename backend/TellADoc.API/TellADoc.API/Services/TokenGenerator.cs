@@ -1,7 +1,9 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
+using TellADoc.API.Models;
 
 namespace TellADoc.API.Services
 {
@@ -14,7 +16,7 @@ namespace TellADoc.API.Services
             Configuration = configuration;
         }
 
-        public string GenerateToken(string email)
+        public string GenerateAccessToken(User user)
         {
             var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
             var issuer = Configuration["Jwt:Issuer"];
@@ -24,8 +26,9 @@ namespace TellADoc.API.Services
             var claims = new List<Claim>
             {
                 new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new(JwtRegisteredClaimNames.Sub, email),
-                new(JwtRegisteredClaimNames.Email, email),
+                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new(ClaimTypes.Email, user.Email),
+                new(ClaimTypes.Role, user.Role)
             };
 
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -40,6 +43,13 @@ namespace TellADoc.API.Services
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
+        }
+
+        public string GenerateRefreshToken()
+        {
+            byte[] randomBytes = new byte[32];
+            RandomNumberGenerator.Fill(randomBytes);
+            return Convert.ToBase64String(randomBytes);
         }
     }
 }
