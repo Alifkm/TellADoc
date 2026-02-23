@@ -7,11 +7,11 @@ using TellADoc.API.Models;
 
 namespace TellADoc.API.Services
 {
-    public class TokenGenerator
+    public class AuthService
     {
         public IConfiguration Configuration { get; }
 
-        public TokenGenerator(IConfiguration configuration)
+        public AuthService(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -47,9 +47,17 @@ namespace TellADoc.API.Services
 
         public string GenerateRefreshToken()
         {
-            byte[] randomBytes = new byte[32];
+            byte[] randomBytes = new byte[64];
             RandomNumberGenerator.Fill(randomBytes);
             return Convert.ToBase64String(randomBytes);
+        }
+
+        public void ValidateRefreshToken(string refreshToken)
+        {
+            if (string.IsNullOrEmpty(refreshToken))
+            {
+                throw new ArgumentNullException(nameof(refreshToken));
+            }
         }
     }
 }

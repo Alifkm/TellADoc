@@ -10,11 +10,11 @@ namespace TellADoc.API.Controllers
 {
     public class AuthController : Controller
     {
-        private TokenGenerator _tokenGenerator;
+        private AuthService _tokenGenerator;
         private readonly ApplicationDbContext _context;
         private readonly PasswordHashGenerator _passwordHashGenerator = new();
 
-        public AuthController(TokenGenerator tokenGenerator, ApplicationDbContext context)
+        public AuthController(AuthService tokenGenerator, ApplicationDbContext context)
         {
             _tokenGenerator = tokenGenerator;
             _context = context;
@@ -46,20 +46,19 @@ namespace TellADoc.API.Controllers
             return Ok(new { accessToken, refreshToken });
         }
 
-        private async Task<IActionResult> SaveRefreshTokenToDatabase(User user, string refreshToken)
+        private async Task SaveRefreshTokenToDatabase(User user, string refreshToken)
         {
             var refreshTokenEntity = new RefreshToken
             {
                 UserId = user.Id,
                 Token = refreshToken,
-                CreatedAt = DateTime.UtcNow,
-                ExpiresAt = DateTime.UtcNow.AddDays(15)
+                CreatedAt = DateTimeOffset.UtcNow,
+                ExpiresAt = DateTimeOffset.UtcNow.AddDays(7)
             };
 
             _context.RefreshToken.Add(refreshTokenEntity);
 
             await _context.SaveChangesAsync();
-            return Ok();
         }
     }
 }
