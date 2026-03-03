@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using TellADoc.API.Models;
 using TellADoc.API.Services;
 using TellADoc.API.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace TellADoc.API.Controllers
 {
@@ -25,15 +26,15 @@ namespace TellADoc.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            var user = _context.User.FirstOrDefault(u => u.Email == request.Email);
-            if(user == null)
+            var user = await _context.User.FirstOrDefaultAsync(u => u.Email == request.Email);
+            if (user == null)
             {
                 return Unauthorized("Email or Password is wrong");
             }
 
             bool isPasswordValid = _passwordHashGenerator.VerifyHash(request.Password, user.PasswordHash);
 
-            if(!isPasswordValid)
+            if (!isPasswordValid)
             {
                 return Unauthorized("Email or Password is wrong");
             }
@@ -44,6 +45,42 @@ namespace TellADoc.API.Controllers
             await SaveRefreshTokenToDatabase(user, refreshToken);
 
             return Ok(new { accessToken, refreshToken });
+        }
+
+        [Route("/refresh")]
+        [HttpPost]
+        public async Task<IActionResult> Refresh([FromBody] RefreshRequest request)
+        {
+            var findRefreshToken = await _context.RefreshToken.FirstOrDefaultAsync(
+                rt => rt.Token == request.RefreshToken &&
+                rt.ExpiresAt >= DateTimeOffset.UtcNow &&
+                rt.RevokedAt == null);
+
+            if (findRefreshToken == null)
+            {
+                return Unauthorized();
+            }
+
+            var user = await _context.User.FirstOrDefaultAsync(u => u.Id == findRefreshToken.UserId);
+
+            if (user == null)
+            {
+                return Unauthorized("User not found");
+            }
+
+            string accessToken = _tokenGenerator.GenerateAccessToken(user);
+            string refreshToken = _tokenGenerator.GenerateRefreshToken();
+
+            await RevokeRefreshToken(findRefreshToken);
+            await SaveRefreshTokenToDatabase(user, refreshToken);
+
+            return Ok(new { accessToken, refreshToken });
+        }
+
+        private async Task RevokeRefreshToken(RefreshToken refreshToken)
+        {
+            refreshToken.RevokedAt = DateTimeOffset.UtcNow;
+            await _context.SaveChangesAsync();
         }
 
         private async Task SaveRefreshTokenToDatabase(User user, string refreshToken)
