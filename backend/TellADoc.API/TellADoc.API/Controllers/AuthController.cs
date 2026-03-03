@@ -75,8 +75,8 @@ namespace TellADoc.API.Controllers
                 return Unauthorized("User not found");
             }
 
-            string accessToken = _tokenGenerator.GenerateAccessToken(user);
-            string refreshToken = _tokenGenerator.GenerateRefreshToken();
+            string accessToken = _authService.GenerateAccessToken(user);
+            string refreshToken = _authService.GenerateRefreshToken();
 
             await RevokeRefreshToken(findRefreshToken);
             await SaveRefreshTokenToDatabase(user, refreshToken);
