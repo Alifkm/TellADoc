@@ -1,8 +1,10 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using TellADoc.API.Context;
 using TellADoc.API.Models;
 
 namespace TellADoc.API.Services
@@ -52,12 +54,19 @@ namespace TellADoc.API.Services
             return Convert.ToBase64String(randomBytes);
         }
 
-        public void ValidateRefreshToken(string refreshToken)
+        public async Task<bool> ValidateRefreshToken(string refreshToken, ApplicationDbContext context)
         {
-            if (string.IsNullOrEmpty(refreshToken))
+            var refreshTokenDb = await context.RefreshToken.
+                FirstOrDefaultAsync(rt => rt.Token == refreshToken && 
+                    rt.RevokedAt != null && 
+                    rt.ExpiresAt > DateTimeOffset.UtcNow);
+
+            if (refreshTokenDb == null)
             {
-                throw new ArgumentNullException(nameof(refreshToken));
+                return false;
             }
+
+            return true;
         }
     }
 }
